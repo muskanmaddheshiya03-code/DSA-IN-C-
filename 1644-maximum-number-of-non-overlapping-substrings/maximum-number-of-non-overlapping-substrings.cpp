@@ -23,14 +23,14 @@ public:
         int last_end = -1;
 
         for (int i = 0; i < n; ++i) {
-            if (i == l[s[i] - 'a']) { 
+            if (i == l[s[i] - 'a']) {
                 int right = getRightBoundary(i);
                 if (right != -1) {
-                    if (i > last_end) {      
+                    if (i > last_end) {
                         res.push_back("");
                     }
                     last_end = right;
-                    res.back() = s.substr(i, right - i + 1); 
+                    res.back() = s.substr(i, right - i + 1);
                 }
             }
         }
